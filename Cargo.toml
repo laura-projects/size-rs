@@ -1,0 +1,16 @@
+[package]
+name = "size-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Tells the size of some structures available on the system"
+authors = ["Laura Carpenter <laura.carpenter@proton.me>"]
+repository = "https://github.com/laura-projects/size-rs"
+keywords = ["struct", "size", "command-line"]
+categories = ["command-line-utilities"]
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.4.4", features = ["derive"] }
+libc = "0.2.148"
