@@ -7,13 +7,22 @@ use clap::Parser;
 struct Args {
 }
 
+fn print_title(title: &str) {
+    println!("\n{title}");
+}
+
+
 fn print_size(struct_type: &str, size: usize) {
-    println!("\t{struct_type}: {size} bytes - {} bits", size*8)
+    if size == 1 {
+        println!("\t{struct_type}: {size} byte - {} bits", size * 8);
+    } else {
+        println!("\t{struct_type}: {size} bytes - {} bits", size * 8);
+    }
 }
 
 
 fn print_integer_sizes() {
-    println!("Integer sizes:");
+    print_title("Integer sizes:");
 
     print_size("u8", size_of::<u8>());
     print_size("u16", size_of::<u16>());
@@ -22,8 +31,9 @@ fn print_integer_sizes() {
     print_size("u128", size_of::<u128>());
 }
 
+
 fn print_ids_types() {
-    println!("Ids types:");
+    print_title("Ids types:");
 
     print_size("pid_t", size_of::<pid_t>());
     print_size("uid_t", size_of::<uid_t>());
@@ -32,9 +42,8 @@ fn print_ids_types() {
 }
 
 
-
 fn print_files_related_sizes() {
-    println!("Files related sizes:");
+    print_title("Files related sizes:");
 
     print_size("ino_t", size_of::<ino_t>());
     print_size("off_t", size_of::<off_t>());
@@ -47,13 +56,12 @@ fn print_files_related_sizes() {
     print_size("dirent64", size_of::<dirent64>());
 }
 
-fn print_lengths() {
 
-    println!("Length sizes:");
+fn print_lengths() {
+    print_title("Length sizes:");
 
     print_size("size_t", size_of::<size_t>());
     print_size("ssize_t", size_of::<ssize_t>());
-
 }
 
 
