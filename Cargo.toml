@@ -5,7 +5,7 @@ edition = "2021"
 description = "Tells the size of some structures available on the system"
 authors = ["Laura Carpenter <laura.carpenter@proton.me>"]
 repository = "https://github.com/laura-projects/size-rs"
-keywords = ["struct", "libc", "size", "command-line"]
+keywords = ["struct", "libc", "size", "command-line", "linux"]
 categories = ["command-line-utilities"]
 license = "GPL-3.0-or-later"
 
