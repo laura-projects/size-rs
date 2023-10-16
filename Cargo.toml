@@ -7,6 +7,7 @@ authors = ["Laura Carpenter <laura.carpenter@proton.me>"]
 repository = "https://github.com/laura-projects/size-rs"
 keywords = ["struct", "libc", "size", "command-line"]
 categories = ["command-line-utilities"]
+license = "GPL-3.0-or-later"
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
